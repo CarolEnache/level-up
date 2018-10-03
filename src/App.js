@@ -1,14 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import ToggleRPC from './ToggleRPC';
-import Portal from './Portal';
-import Modal from './Modal';
+import { Toggle, Portal, Modal } from './Utilities';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ToggleRPC >
+        <Toggle >
           {({on, toggle}) => (
             <Fragment>
               <button onClick={toggle}>Login</button>
@@ -17,7 +15,7 @@ class App extends Component {
               </Modal>
             </Fragment>
           )}
-        </ToggleRPC>
+        </Toggle>
       </div>
     );
   }
